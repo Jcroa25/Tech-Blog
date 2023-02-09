@@ -1,0 +1,18 @@
+[
+    {
+      "blog_id": 1,
+      "username": "JuanCarlos",
+      "content": "HTML"
+    },
+    {
+        "blog_id": 2,
+        "username": "Andrew",
+        "content": "CSS"
+    },
+    {
+        "blog_id": 3,
+        "username": "Leilani",
+        "content": "JavaScript"
+    }
+]
+

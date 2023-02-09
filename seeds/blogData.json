@@ -1,0 +1,17 @@
+[
+  {
+    "title": "HTML",
+    "content": "Cheatsheet for HTML.",
+    "user_id": 1
+  },
+  {
+    "title": "CSS",
+    "content": "Cheatsheet for CSS.",
+    "user_id": 2
+  },
+  {
+    "title": "JavaScript",
+    "content": "Cheatsheet for Javascript.",
+    "user_id": 3
+  }
+]
