@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const { Post, User, Comment } = require('../../models');
-const sequelize = require('../../config/connection');
-const withAuth = require('../../utils/auth');
+const sequelize = require('../config/connection');
+const { Comment } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
   Post.findAll({
@@ -120,5 +120,6 @@ router.get('/create/', withAuth, (req, res) => {
         res.status(500).json(error);
     });
 });
+
 
 module.exports = router;
