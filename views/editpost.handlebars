@@ -1,3 +1,17 @@
-<h2>Edit Post</h2>
-
-<form
+<div>
+  <h2>Edit Post</h2>
+    <form class="form edit-post-form">
+       <div class="mb-3">
+        <label class="form-label" for="post-title"> Enter Title</label>
+        <input class="form-control"  placeholder="Title" id="post-title"/>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="post-text"> Enter Text</label>
+        <input class="form-control"  placeholder="Text Here..." id="post-text"/>
+      </div>
+        <button class="btn btn-outline mt-2" type="submit">Update Post</button>
+        <button class="delete-post-btn btn-outline mt-2" type="button">Delete Post</button>
+      </div>  
+    </form>  
+</div>     
+<script src="/Tech-Blog/public/js/addPost.js"></script>
