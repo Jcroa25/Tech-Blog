@@ -12,7 +12,7 @@ const text = document.querySelector('#post-text').value.trim();
       });
   
       if (response.ok) {
-        document.location.replace('/memberProfile');
+        document.location.replace('/userProfile');
       } else {
         alert(response.statusText);
       }
