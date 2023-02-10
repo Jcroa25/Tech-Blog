@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {
           console.log(err);
-          res.status(400).json(err);
+          res.status(500).json(err);
         })
 });
 
@@ -22,7 +22,7 @@ router.get('/:id', (req, res) => {
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {
             console.log(err);
-            res.status(400).json(err);
+            res.status(500).json(err);
         })
 });
 
@@ -59,7 +59,7 @@ router.put('/:id', withAuth, (req, res) => {
       res.json(dbCommentData);
   }).catch(err => {
     console.log(err);
-    res.status(400).json(err);
+    res.status(500).json(err);
   });
 });
 
@@ -78,7 +78,7 @@ router.delete('/:id', withAuth, (req, res) => {
     res.json(dbCommentData);
   }).catch(err => {
     console.log(err);
-    res.status(400).json(err);
+    res.status(500).json(err);
   });
 });
 
