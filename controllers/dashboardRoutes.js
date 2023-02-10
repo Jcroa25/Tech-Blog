@@ -39,6 +39,7 @@ router.get('/', withAuth, (req, res) => {
         res.status(500).json(error);
       });
   });
+  
 router.get('/edit/:id', withAuth, (req, res) => {
   Post.findOne({
     where: {
