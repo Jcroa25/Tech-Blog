@@ -1,24 +1,21 @@
-const createPostHandler = async (event) => {
+const newPostHandler = async (event) => {
     event.preventDefault();
 
-const title = document.querySelector('#post-title').value.trim();
-const text = document.querySelector('#post-text').value.trim();
-  
-    if (title && text) {
-      const response = await fetch('/api/posts', {
-        method: 'POST',
-        body: JSON.stringify({ title, text }),
-        headers: { 'Content-Type': 'application/json' },
-      });
+const title = document.querySelector('input[name="post-title"]').value.trim();
+const text = document.querySelector('input[name="post-text"]').value.trim();
+const response = await fetch('/api/posts', {
+  method: 'POST',
+  body: JSON.stringify({ title, text }),
+  headers: { 'Content-Type': 'application/json' },
+});
   
       if (response.ok) {
-        document.location.replace('/userProfile');
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
       }
-    }
   };
   
-  document
-    .querySelector('.create-post')
-    .addEventListener('submit', createPostHandler);
+document
+ .querySelector('#new-post-form')
+ .addEventListener('submit', newPostHandler);
