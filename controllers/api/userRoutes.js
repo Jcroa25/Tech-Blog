@@ -28,7 +28,7 @@ router.get('/:id', (req, res) => {
             attributes: ['id', 'comment_text', 'created_at'],
             include: {
               model: Post,
-              attributes: ['title']
+              attributes: ['title', 'email']
             }
           }
         ]
@@ -36,7 +36,7 @@ router.get('/:id', (req, res) => {
   })
     .then(dbUserData => {
       if (!dbUserData) {
-        res.status(400).json({ message: 'No user found with this id' });
+        res.status(400).json({ message: 'Unable to find user' });
         return;
       }
       res.json(dbUserData);
